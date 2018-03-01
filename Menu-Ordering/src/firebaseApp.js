@@ -14,3 +14,6 @@ export const firebaseApp = firebase.initializeApp(config)
 export const eventsRef = firebaseApp.database().ref().child('events')
 
 export const ordersRef = firebaseApp.database().ref().child('orders')
+export const submitRef = firebaseApp.database().ref().child('complete')
+export const paidRef = firebaseApp.database().ref().child('paid')
+

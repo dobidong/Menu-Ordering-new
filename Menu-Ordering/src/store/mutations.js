@@ -20,11 +20,14 @@ export const mutations = {
     [types.REMOVE_FROM_CART] (state, index) {
         state.inCart.splice(index, 1)
     },
-
-    [types.SUBMIT_ORDER] (state, order) {
-        state.inCart.push(order)
-    }
-//    [types.REMOVE_EVENTS] (state, index) {
-//        state.events.splice('index, 1')
-//    }
+    //new
+    [types.SET_ORDERS] (state, orders_payload) {
+        state.orders = orders_payload
+    },
+    [types.REMOVE_EVENTS] (state, index) {
+        state.events.splice(index, 1)
+    },
+    [types.DONE_ORDERS] (state, completed_payload) {
+        state.completed = completed_payload
+    },
 }

@@ -20,9 +20,12 @@ export const removeFromCart = ({commit}, index) => {
     commit(types.REMOVE_FROM_CART, index)
 }
 
-export const submitOrder = ({commit}, order) => {
-    commit(types.SUBMIT_ORDER, order)
+export const setOrders = ({commit}, orders_payload) => {
+    commit(types.SET_ORDERS, orders_payload)
 }
-//export const removeEvent = ({commit}, index) => {
-//    commit(types.REMOVE_EVENTS, index)
-//}
+export const removeEvent = ({commit}, index) => {
+    commit(types.REMOVE_EVENTS, index)
+}
+export const doneOrders = ({commit}, completed_payload) => {
+    commit(types.DONE_ORDERS, completed_payload)
+}

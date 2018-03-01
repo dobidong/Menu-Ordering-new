@@ -1,6 +1,7 @@
 <template>
 <div class=''>
-    <h4>Add Guest <input type='checkbox' v-model='showForm'></h4>
+    <h1>Events Board</h1>
+    <h4>Add Event <input type='checkbox' v-model='showForm'></h4>
     <div class="form" v-if='showForm'>
         <div class='form-group'>
             <label>Event Name</label>

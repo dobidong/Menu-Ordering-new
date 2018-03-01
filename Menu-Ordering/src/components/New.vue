@@ -2,13 +2,13 @@
   <div class="container my-5">
     <div class="row mb-3">
       <div class="col-md-9">
-        <h1>Barrio Fiesta Menu</h1>
       </div>
       <div class="col-md-3">
         <ShoppingCart />
       </div>
     </div>
-      <h1>Main Course</h1><br>
+    <h1>Barrio Fiesta Menus</h1><br>
+<br>
     <div class="row">
       <Item
         v-for="item in MainCourse"
@@ -26,6 +26,11 @@ import Item from './Item.vue'
 import ShoppingCart from './ShoppingCart.vue'
 
 export default {
+  data() {
+    return {
+      selected: null
+    }
+  },
   name: 'app',
   computed: {
     MainCourse() { return this.$store.getters.MainCourse }

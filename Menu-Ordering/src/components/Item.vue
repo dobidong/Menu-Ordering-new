@@ -6,7 +6,9 @@
         <h4 class="card-title">{{ name }}</h4>
         <div class="card-text">{{ price | dollars }}</div>
         <div class="row justify-content-end">
-          <button class="btn btn-primary" @click="addToCart(invId)">Add to cart</button>
+          <button class="btn btn-primary btn-block btn-lg" @click="addToCart(invId)">
+            <span class="glyphicon glyphicon-shopping-cart"></span>Add to cart
+            </button>
           <div id='toast'>Added to Cart</div>
         </div>
       </div>

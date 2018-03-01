@@ -1,17 +1,32 @@
-<template>
-<div class="">
-  <h1>Events Dashboard</h1>
-  <button class='btn btn-danger btn-sm signout-btn' @click='signOut'>Sign Out</button>
-    <router-link to='new'>
-        <button class="btn btn-primary">
+<template><div class="">
+      <router-link to='new'>
+        <button class="btn btn-primary btn-lg">
             Ordering Menu
         </button>
     </router-link>
     <router-link to='kitchen'>
-        <button class="btn btn-primary">
-            Orders View (Kitchen)
+        <button class="btn btn-primary btn-lg">
+            Kitchen
         </button>
     </router-link>
+      <router-link to="/signup">
+              <button class="btn btn-primary btn-lg">
+            Sign up
+        </button>
+        </router-link>
+      <router-link to="/completed">
+              <button class="btn btn-primary btn-lg">
+            Cashier
+        </button>
+        </router-link>
+              <router-link to="/report">
+              <button class="btn btn-primary btn-lg">
+            Reports
+        </button>
+        </router-link>
+        <button class='btn btn-danger btn-lg' @click='signOut'>
+            Sign Out
+        </button>
   <hr>
   <AddEvent />
   <hr>
@@ -21,7 +36,7 @@
       v-for="(event_item, index) in this.$store.state.events" 
       :event="event_item"
       :index='index'
-      key1="index"
+      :key="index"
     />
   </div>
 </div>

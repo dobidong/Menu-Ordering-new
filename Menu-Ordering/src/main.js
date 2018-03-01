@@ -13,7 +13,8 @@ import New from './components/New.vue'
 import ShoppingCart from './components/ShoppingCart.vue'
 import Item from './components/Item.vue'
 import Kitchen from './components/Kitchen.vue'
-
+import Reports from './components/Reports.vue'
+import Completed from './components/Completed.vue'
 
 const router = new VueRouter ({
   mode: 'history',
@@ -24,7 +25,9 @@ const router = new VueRouter ({
     { path: '/new', component: New },
     { path: '/shoppingCart', component: ShoppingCart },
     { path: '/item', component: Item },
-    { path: '/kitchen', component: Kitchen }
+    { path: '/kitchen', component: Kitchen },
+    { path: '/reports', component: Reports },
+    { path: '/completed', component: Completed }
   ]
 })
 
@@ -32,7 +35,6 @@ firebaseApp.auth().onAuthStateChanged(user => {
   if (user) {
     store.dispatch('signIn', user)
     router.push('/dashboard')
-    router.push('/new')
   } else {
     router.replace('/signin')
   }
